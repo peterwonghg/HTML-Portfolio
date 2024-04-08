@@ -1,77 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #262626;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
-/* Logo Formation */
+.page__container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* || Logo Formation */
+.welcome__logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    align-items: top;
+    display: flex;
+    justify-content: right;
+    margin-right: 3%;
+}
 
 .logo__container {
-    position: relative;
+    position: absolute;
     text-align: center;
 }
 
-.logo__font--standard {
+.Hglogo__container {
+    position: absolute;
+    text-align: center;
+}
+
+.logo__font {
     font-size: 33px;
 }
 
 .logo__Hg {
-    font-weight: bold;
-    color: #ffc000;
-    position: relative;
-    display: inline-block;
+  display: inline-block;
+
+  position: relative;
+
+  color: #ffc000;
+  font-weight: bold;
+  text-decoration: none;
 }
 
+.headerLogo__Hg {
+  display: inline-block;
+
+  position: relative;
+
+  color: #ffc000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo__Hg-large {
+    color: #ffc000;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+}
 
 .logo__atomic-number {
+    color: #262626;
+    font-size: 12px;
+    left: 62%;
     position: absolute;
     top: 5%;
-    left: 61%;
     transform: translateX(-50%);
-    font-size: 12px;
-    color: #262626;
 }
 
-.logo__element-name {
-    position: absolute;
-    top: 59%;
-    left: 69%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: #262626;
+.logo__pelement-name {
+  position: absolute;
+
+  color: #262626;
+  left: 69%;
+  top: 59%;
+  
+  font-size: 12px;
+
+  transform: translateX(-50%);
 }
 
 /* Show atomic number and element name after hovering over Logo's "peterwong" or ".com" */
 .logo__container:hover .logo__atomic-number,
-.logo__container:hover .logo__element-name {
+.logo__container:hover .logo__pelement-name {
   color: #ffffff;
   display: block;
 }
 
 /* Apply hovering box animation effect on Hg */
+.logo__Hg::before {
+  align-content: center;
+  justify-self: right;
 
-  .logo__Hg::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 65%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 80px;
-    background-color: #ffffff;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
+  position: absolute;
+
+  background-color: #ffffff;
+  content: 'My Mercurial Journey - come with me';
+  height: 80px;
+  left: 65%;
+  opacity: 0;
+  text-indent: 130px;
+  top: -20px;
+  white-space: nowrap;
+  width: 60px;
+
+  font-size: 20px;
+  font-style: italic;
+
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo__Hg-large:before {
+  align-content: flex-end;
+  justify-self: right;
   
-  .logo__Hg:hover::before {
-    opacity: 0.2; /* Show the box */
+  position: absolute;
+
+  background-color: #ffffff;
+  content: 'Thank you for joining me on this journey';
+  height: 80px;
+  left: 25px;
+  opacity: 0;
+  top: -20px;
+  text-indent: 70px;
+  white-space: nowrap;
+  width: 60px;
+
+  font-size: 20px;
+  font-style: italic;
+  
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease-in-out;
+
+}
+  
+/* Show the box */
+  .logo__Hg:hover::before,
+  .logo__Hg-large:hover::before {
+    opacity: 0.2; 
   }
 
+/* Logo Formation || */
+
+
+/* || Header Formation */
+
+.header__container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  height: 150px;
+  width: 100%;
+}
+
+.Hg__container {
+  flex: 30;
+
+  margin-left: 20px;
+}
+
+.toplogo__container {
+  flex: 70;
+
+  background-color: #262626;
+  color: #ffffff;
+  height: 100%;
+  padding: 1rem;
+  text-align: right;
+}
+
+/* Header Formation || */
 
