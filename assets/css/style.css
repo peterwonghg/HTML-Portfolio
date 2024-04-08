@@ -6,12 +6,15 @@ body, html {
     font-family: 'Lato', sans-serif;
     height: 100%;
     margin: 0;
+
+    padding-top: 50px;
 }
 
 .page__container {
   display: flex;
   flex-direction: column;
 }
+
 
 /* || Logo Formation */
 .welcome__logo {
@@ -162,7 +165,12 @@ body, html {
   display: flex;
   justify-content: space-between;
 
-  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  height: 100px;
   width: 100%;
 }
 
@@ -184,3 +192,18 @@ body, html {
 
 /* Header Formation || */
 
+
+/* || Hero Banner Formation */
+
+.hero__banner {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+/* Hero Banner Formation || */
